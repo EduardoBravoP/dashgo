@@ -1,6 +1,6 @@
 import { UseDisclosureReturn } from "@chakra-ui/core/dist/useDisclosure"
 import { useDisclosure } from "@chakra-ui/react"
-import { useRouter } from "next/dist/client/router"
+import { useRouter } from "next/router"
 import { createContext, ReactNode, useContext, useEffect } from "react"
 
 interface SidebarDrawerProviderProps {
