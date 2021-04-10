@@ -1,6 +1,6 @@
 import { Flex, Icon, IconButton, useBreakpointValue } from '@chakra-ui/react'
 import { RiMenuLine } from 'react-icons/ri'
-import { UseSidebarDrawer } from '../../contexts/SidebarDrawerContent'
+import { UseSidebarDrawer } from '../../contexts/SidebarDrawerContext'
 import { Logo } from './Logo'
 import { NotificationsNav } from './NotificationsNav'
 import { Profile } from './Profile'
