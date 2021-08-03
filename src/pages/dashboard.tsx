@@ -1,4 +1,5 @@
 import { Flex, SimpleGrid, Box, Text, theme } from "@chakra-ui/react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import dynamic from 'next/dynamic'
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
@@ -59,9 +60,15 @@ const series = [
   { name: 'series1', data: [31, 120, 10, 28, 90, 80, 110] }
 ]
 
-export default function Dashboard() {
+export default function Dashboard() {  
+  const variants = {
+    hidden: { opacity: 0, scale: 0.2 },
+    visible: { opacity: 1, scale: 1 }
+  }
+  
   return (
-    	<Flex direction="column" h="100vh">
+    <motion.div transition={{ duration: 2 }} initial="hidden" animate="visible" variants={variants}>
+      <Flex direction="column" h="100vh">
         <Header />
 
         <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
@@ -89,5 +96,6 @@ export default function Dashboard() {
           </SimpleGrid>
         </Flex>
       </Flex>
-    )
+    </motion.div>  	
+  )
 }
